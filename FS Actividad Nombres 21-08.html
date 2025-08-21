@@ -12,17 +12,45 @@
 <body>
     <script>
         function mayus() {
-
             var nombre = prompt('Ingrese su nombre')
             var apellido = prompt('Ingrese su apellido')
-
-            return nombre.toUpperCase() + " " + apellido.toUpperCase()
-
+            return nombre.toUpperCase() + " " + apellido.toUpperCase();
         }
 
-        alert(mayus)
+        // Segunda función solicitada
+        function mostrarDatosYCalcularCarga() {
+            var nombre = prompt('Ingrese su nombre:');
+            var apellido = prompt('Ingrese su apellido:');
+            var sueldoActual = parseInt(prompt('Ingrese el sueldo base actual:'));
+            var sueldoPromedio = parseInt(prompt('Ingrese el sueldo base promedio del semestre anterior:'));
+            var tieneCargas = prompt('¿Tiene cargas familiares autorizadas? (si/no)').toLowerCase();
+            var valorCarga = 0;
+            // Tabla ejemplo: 1 carga = 10000, 2 cargas = 20000, 3 o más = 30000
+            if (tieneCargas === 'si') {
+
+                if (sueldoActual <= 429899) {
+                    valorCarga = 16828;
+                } else if (sueldoActual > 429899 && sueldoActual <= 627913) {
+                    valorCarga = 10327;
+                } else if (sueldoActual > 627913 && sueldoActual <= 979330) {
+                    valorCarga = 3264;
+                } else {
+                    valorCarga = 0;
+                }
+            }
+            var mensaje = `Nombre: ${nombre}\nApellido: ${apellido}\nSueldo Actual: ${sueldoActual}\nSueldo Promedio: ${sueldoPromedio}`;
+            if (tieneCargas === 'si') {
+                mensaje += `\nCargas familiares: Sí\nValor por cargas: ${valorCarga}`;
+            } else {
+                mensaje += `\nCargas familiares: No`;
+            }
+            alert(mensaje);
+            return valorCarga;
+        }
     </script>
 
+
+    <button onclick="mostrarDatosYCalcularCarga()">Mostrar datos y calcular carga</button>
 </body>
 
 </html>
