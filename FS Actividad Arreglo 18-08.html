@@ -12,53 +12,98 @@
 <body>
     <script>
         // Funcion para llenar un arregla de numero doble al anterior
+        /*
+                function llenarArray() {
 
-        function llenarArray() {
+                    const numeros = [1];
+                    for (let i = 0; i < 10; i++) {
 
-            const numeros = [1];
-            for (let i = 0; i < 10; i++) {
-
-                numeros.push(numeros[i] * 2)
-            }
-            return numeros;
-        }
-
-        console.log(llenarArray())
-
-        // Funcion para detectar el numero mayor del arreglo
-
-
-        function obtenerMayor(arreglo) {
-            if (arreglo.length < 10) {
-                alert("El arreglo debe tener minimo 10 elementos");
-            }
-
-            let mayor = arreglo[0];
-
-            for (let i = 1; i < arreglo.length; i++) {
-                if (arreglo[i] > mayor) {
-                    mayor = arreglo[i];
+                        numeros.push(numeros[i] * 2)
+                    }
+                    return numeros;
                 }
-            }
-            return mayor;
-        }
 
-        alert("El numero mayor del arreglo es " + obtenerMayor(llenarArray()))
+                console.log(llenarArray())
+        */
+        // Funcion para detectar el numero mayor del arreglo
+        /*
 
+                function obtenerMayor(arreglo) {
+                    if (arreglo.length < 10) {
+                        alert("El arreglo debe tener minimo 10 elementos");
+                    }
+
+                    let mayor = arreglo[0];
+
+                    for (let i = 1; i < arreglo.length; i++) {
+                        if (arreglo[i] > mayor) {
+                            mayor = arreglo[i];
+                        }
+                    }
+                    return mayor;
+                }
+
+                alert("El numero mayor del arreglo es " + obtenerMayor(llenarArray()))
+        */
 
         // Funcion para obtener el dia de la semana segun su numero (1 = lunes, 7 = domingo)
+        /*
+                function obtenerDia() {
+                    numero = parseInt(prompt("Ingrese un numero"));
+                    const dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
+                    if (numero < 1 || numero > 7) {
+                        return "Numero invalido";
+                    }
+                    return dias[numero - 1];
+                }
 
-        function obtenerDia() {
-            numero = parseInt(prompt("Ingrese un numero"));
-            const dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
-            if (numero < 1 || numero > 7) {
-                return "Numero invalido";
+                alert("El numero corresponde al dia " + obtenerDia());
+        */
+
+        // Funcion para obtener el lugar de un numero en un arreglo de 100 elementos
+        /*
+        
+        function crearArreglo100() {
+            const arreglo = [];
+            for (let i = 1; i <= 100; i++) {
+                arreglo.push(i);
             }
-            return dias[numero - 1];
+            return arreglo;
         }
 
+        function buscarElemento(arreglo, elemento) {
+            for (let i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] === elemento) {
+                    return i + 1;
+                }
+            }
+            return -1;
+        }
 
-        alert("El numero corresponde al dia " + obtenerDia());
+        const numeros = crearArreglo100();
+        const buscado = 75; 
+        const indice = buscarElemento(numeros, buscado);
+        if (indice !== -1) {
+            alert("Elemento encontrado en la posición: " + indice);
+        } else {
+            alert("Elemento no encontrado en el arreglo.");
+        }
+
+*/
+
+        // Funcion que ordena un arreglo de forma ascendente
+        /*
+                function ordena_nums() {
+                    const numeros = [100, 20, 5, 300, 1, 64];
+                    numeros.sort(function(a, b) {
+                        return a - b;
+                    });
+
+                    alert(numeros);
+                }
+                ordena_nums();
+
+        */
     </script>
 </body>
 
